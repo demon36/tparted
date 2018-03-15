@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tParted</title>
+	<!-- <link rel='stylesheet' href='/stylesheets/jquery-ui.css' /> -->
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-select.min.css">
+	<link rel="stylesheet" href="/stylesheets/jquery.simplecolorpicker.css">
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<link rel="stylesheet" href="/stylesheets/tasksPanel.css" />
+
+	<script type="text/javascript" src="/javascripts/reqs/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/reqs/jquery-ui.js"></script>
+	<script type="text/javascript" src="/javascripts/reqs/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/javascripts/reqs/jquery.simplecolorpicker.js"></script>
+	<script type="text/javascript" src="/javascripts/reqs/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/javascripts/reqs/bootstrap-select.min.js"></script>
+
+	
+
+</head>
+<body id="body">
+	<nav class="navbar navbar-default">
+		<!-- <div class="container-fluid"> -->
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">tParted</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/tasks">Tasks panel</a></li>
+					<li><a href="/profile">Profile</a></li>
+					<li><a href="/contact">Contact</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li role="separator" class="divider"></li>
+					<li><a id="admin" href="/admin">Admin panel</a></li>
+					<li><a id="save" href="#">Save</a></li>
+					<li><a id="register" href="#">Register</a></li>
+					<li><a id="login" href="#">Login</a></li>
+					<li><a id="logout" href="#">Logout</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		<!-- </div> -->
+	</nav>
+
+	<div id="content">
+	<div id="mist" style="display:none;">
+		<div class="panel panel-default prompt">
+			<div class="panel-body">
+
+				<div style="display:none">
+					<label for="loginRadio">login</label><input type="radio" name="action" id="loginRadio" checked/>
+					<label for="registerRadio">register</label><input type="radio" name="action" id="registerRadio"/><br>
+				</div>
+				<img src="../images/logo.png" style="width:100%;"/><br/>
+				partition your time
+
+				<div class="input-group">
+					<span class="input-group-addon" id="sizing-addon1">username</span>
+					<input type="text" id="username" class="form-control" placeholder="username" aria-describedby="sizing-addon1">
+				</div>
+
+				<div class="input-group" id="emailContainer">
+					<span class="input-group-addon" id="sizing-addon1">email</span>
+					<input type="text" id="email" class="form-control" placeholder="email" aria-describedby="sizing-addon1">
+				</div>
+
+				<div class="input-group" id="fullnameContainer">
+					<span class="input-group-addon" id="sizing-addon1">full name</span>
+					<input type="text" id="fullname" class="form-control" placeholder="full name" aria-describedby="sizing-addon1">
+				</div>
+
+				<div class="input-group" id="profilePictureContainer">
+					<span class="input-group-addon" id="sizing-addon1">profile picture</span>
+					<input type="file" id="profilePictureInput" class="form-control" />
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="sizing-addon1">password</span>
+					<input type="password" id="password" class="form-control" placeholder="password" aria-describedby="sizing-addon1">
+				</div>
+
+				<div class="input-group" id="confirmPasswordContainer">
+					<span class="input-group-addon" id="sizing-addon1">confirm password</span>
+					<input type="password" id="confirmPassword" class="form-control" placeholder="password again" aria-describedby="sizing-addon1">
+				</div>
+
+				<div id="authResponse"></div><br/><br/>
+				<button id="submit" type="submit" class="btn btn-primary">login</button>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		{{{body}}}
+	</div>
+</div>
+
+	
+<script type="text/javascript" src="/javascripts/constructors.js"></script>
+<script type="text/javascript" src="/javascripts/auth.js"></script>
+<script type="text/javascript" src="/javascripts/ui_auth.js"></script>
+
+<script type="text/javascript" src="/javascripts/ui_cat.js"></script>
+<script type="text/javascript" src="/javascripts/ui_task.js"></script>
+<script type="text/javascript" src="/javascripts/ui_day.js"></script>
+<script type="text/javascript" src="/javascripts/ui_taskDetails.js"></script>
+
+</body>
+</html>

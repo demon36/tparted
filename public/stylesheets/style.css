@@ -1,0 +1,249 @@
+* {
+	margin:0;
+	padding:0;
+	font-family:  "Droid Sans", "Arial";
+	font-size: 1.025em;
+}
+
+html{
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0 0.5%;
+	overflow: hidden;
+	font-family:  "Droid Sans", "Arial";
+}
+
+li {
+	text-align: left;
+	display:block;
+}
+
+ul{
+	margin-bottom:0px;
+}
+
+.navbar{
+	/*display: table-row;*/
+	border: 0px;
+	/*height: 50px;*/
+}
+
+#wrapper{
+	/*display: table;*/
+	height: 100%;
+	width: 100%;
+}
+
+.dragHandle{
+	cursor: move; 
+}
+
+div#navBar{
+	text-align: right;
+	padding: 0 2%;
+	background-color: #4c4c4c;
+	/*height: 2em;*/
+	height: 4%;
+	/*min-height: 1.5em;*/
+}
+
+nav.navbar{
+	margin-bottom:0px;
+}
+
+.container-fluid{
+	height:100%;
+	padding:0 1%;
+}
+
+.day-container{
+	height: 100%;
+}
+
+.input-group-addon:first-child {
+    min-width: 8em;
+}
+
+#profilePictureContainer{
+	display: none;
+}
+/*@media (min-width: 768px){
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    height: 100%;
+    padding-right: 4px;
+  padding-left: 4px;
+  }
+
+}*/
+
+
+/*@media handheld {
+	.col-md-1{
+ 		width: 50%; 
+	} 
+}
+
+@media screen {
+	.col-md-1{
+		width: 14.285714285714285714285714285714%;
+		height: 100%;
+		padding-right: 4px;
+		padding-left: 4px;
+	}
+}*/
+
+div#daysContainer{
+	padding-top: 1%;
+	display: inline-block;
+	height: 46%;
+	margin: 0px -5px;
+}
+
+.day-container{
+	width: 14.285714285714285714285714285714%;
+	height: 100%;
+	/*padding-right: 4px;*/
+	/*padding-left: 4px;*/
+	display: inline-block;
+	float: left;
+	height: 100%;
+	padding: 0 0.2%;
+}
+
+.day-container .panel{
+	height: 100%;
+}
+
+.dayPager{
+	display: inline-block;
+	vertical-align: middle;
+	width: 5em;
+	margin: 0;
+	height: 100%;
+	padding-top: 1%;
+}
+
+.mobilePager{
+	display: none;
+}
+
+#leftPager{
+    float: left;
+}
+
+#rightPager{
+    float: right;
+}
+
+.pager{
+	margin : 0.2em;
+}
+
+button{
+	padding: 0 1em;
+}
+
+#navBar button{
+	height: 100%;
+}
+
+input, textarea{
+	background-color: transparent;
+	color: #000;
+	border-width: 0 0 1px 0;
+	border-color: #DDDDDD;
+}
+
+input[type='radio']{
+	width: auto;
+}
+
+label{
+	display: inline-block;
+    /*width: 30%;*/
+    /*margin-left: 10%;*/
+}
+
+#mist{
+	background-color: rgba(0,0,0,0.6);
+	width: 99%;
+    height: 95%;
+    z-index: 10;
+    position: absolute;
+    /*top: 2em;*/
+    /*top: 4%;*/
+    text-align: center;
+}
+
+.prompt{
+	width: 35%;
+	min-width: 300px;
+	display: inline-block;
+	margin-top: 2%;
+	padding: 1% 2%;
+	line-height: 200%;
+}
+
+input.form{
+	color:white;
+	width:50%;
+	margin-left:5%;
+	float:right;
+}
+
+#authResponse{
+	color:red;
+}
+
+#content{
+	width: 100%;
+    /*min-width: 500px;*/
+    height: 96%;
+    background-color: #d2d2d2;
+    margin: 0 auto;
+    text-align: center;
+    /*display:table-row;*/
+    height: calc(100% - 50px);
+    overflow: hidden;
+}
+
+#leftNav{
+	float:left;
+	height: 100%;
+}
+
+#emailLabel, #fullNameLabel, #confirmPasswordLabel{
+	display: inline-block;
+}
+
+.userInfoLabel{
+	display: inline-block;
+	width:40%;
+	text-align: center;
+	padding :0.2em 0em;
+}
+
+.userInfoValue{
+	display: inline-block;
+	width:40%;
+	text-align: center;
+	color:navy;
+	padding :0.2em 0em;
+}

@@ -1,0 +1,235 @@
+<script type="text/javascript" src="/javascripts/tasksPanel.js"></script>
+
+    <div id="tasksBlock">
+        
+      
+
+      <div id="catUI">
+        <ul style="display:none" id="invitesList">
+        </ul><br style="display:none" />
+
+        <ul id="catList">
+        </ul><br />
+
+        <!-- <li style="background-color: #e1e1e1;">
+          <input type="text" placeholder="search" id="task-search">
+          <img class="icon task-search-icon" src="../images/search.png"></img>
+        </li> -->
+      </div>
+      
+
+
+      <div id="taskDetails" class="tasks-sidebar">
+        <div id="taskDetailsContents">
+        <h3 id="taskTitle">&nbsp;</h3>
+        <!-- <img src="../images/upload-image.jpg" style="height:35%"/> -->
+        <textarea type="text" id="taskDesc" rows="2" placeholder="add task description"></textarea><br/>
+
+          <!-- add <input type="number" id="fractionNumHoursInput"/> hours<br/>
+          to <select id="fractionDaySelect"><option>sat</option><option>sun</option><option>mon</option><option>tue</option>
+          <option>wed</option><option>thu</option><option>fri</option></select>
+          <button id="addFracBtn">add</button> -->
+        </div>
+
+      </div>
+
+
+      <div class="panel panel-default tasks-sidebar" id="search-settings">
+        <div class="panel-body">
+
+          <div class="checkbox">
+            <label><input type="checkbox" value="">search for exact text</label>
+          </div>
+
+          <div class="checkbox">
+            <label><input type="checkbox" value="">search active tasks only</label>
+          </div>
+
+          <div class="checkbox">
+            <label><input type="checkbox" value="">search selected categories only</label>
+          </div>
+
+          <select class="selectpicker" multiple>
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select><br/><br/>
+
+          <select class="selectpicker">
+            <option>sort by name</option>
+            <option>sort by date</option>
+            <option>sort by priority</option>
+          </select>
+
+        </div>
+      </div>
+
+
+      <div id="taskListContainer">
+        <div id="task-mist">
+        <div class="panel panel-default prompt">
+          <div class="panel-body">
+
+            <div id="invitation-prompt">
+              <button id="submit" type="submit" class="btn btn-default">accept</button>
+              <button id="submit" type="submit" class="btn btn-default">remove invitation</button>
+            </div>
+
+            <div id="sharing-prompt">
+              <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon1">share with</span>
+                <input type="text" id="username" class="form-control" placeholder="type reciepent username">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">add</button>
+                </span>
+              </div><br/>
+
+              <div class="list-group">
+
+                <div class="input-group">
+                  <input type="text" class="form-control" value="firefly34" disabled/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">read only<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">read only</a></li>
+                      <li><a href="#">read/write</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <input type="text" class="form-control" value="deadlyvenom61" disabled/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">read only<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">read only</a></li>
+                      <li><a href="#">read/write</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                </div>
+
+              </div>
+              <button id="submit" type="submit" class="btn btn-default">share</button>
+              <button id="submit" type="submit" class="btn btn-default">cancel</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+        <ul id="taskList">
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div id="leftPager" class="dayPager" style="">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <button type="button" class="prevDayPager btn btn-default">
+            <span class="glyphicon glyphicon glyphicon-triangle-left" />
+          </button><br /><br />
+          <button type="button" id="prevWeekPager" class="btn btn-default">
+            <span class="glyphicon glyphicon-backward" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="daysContainer" style="" class="">
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <button type="button" class="prevDayPager btn btn-default mobilePager">
+            <span class="glyphicon glyphicon glyphicon-triangle-left" />
+          </button>
+          <h3 class="panel-title dayName">saturday</h3>
+          <button type="button" class="nextDayPager btn btn-default mobilePager">
+            <span class="glyphicon glyphicon glyphicon-triangle-right" />
+          </button>
+        </div>
+          <ul id="0" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <h3 class="panel-title dayName">sunday</h3>
+        </div>
+          <ul id="1" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <h3 class="panel-title dayName">monday</h3>
+        </div>
+          <ul id="2" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <h3 class="panel-title dayName">tuesday</h3>
+        </div>
+          <ul id="3" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <h3 class="panel-title dayName">wednesday</h3>
+        </div>
+          <ul id="4" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <h3 class="panel-title dayName">thursday</h3>
+        </div>
+          <ul id="5" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+    <div class="day-container">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <h3 class="panel-title dayName">friday</h3>
+        </div>
+          <ul id="6" class="dayList panel-body container-fluid"></ul>
+      </div>
+    </div>
+
+    </div>
+
+    <div id="rightPager" class="dayPager" style="">
+      <div class="panel panel-default">
+        <div class="panel-heading dayHeading">
+          <button type="button" class="nextDayPager btn btn-default">
+            <span class="glyphicon glyphicon glyphicon-triangle-right" />
+          </button><br /><br />
+          <button type="button" id="nextWeekPager" class="btn btn-default">
+          <span class="glyphicon glyphicon-forward" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <ul id="dayPager" class="pager">
+      <li><button type="button" id="prevWeekPager" class="btn btn-default">&lt;&lt;</button></li>
+      <li><button type="button" id="nextWeekPager" class="btn btn-default">&gt;&gt;</button></li>
+    </ul> -->
+
+
+
+
+
+

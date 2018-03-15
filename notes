@@ -1,0 +1,94 @@
+category
+-title
+-color
+-tasks[]
+
+task
+-title
+-desc
+-type
+-hours
+-fractions[]
+
+taskFraction
+-dayID
+-index(dayIndex ?)
+-numHours
+-dom only:
+--catID
+--taskID
+--color
+
+-soln for draggable sortable problem
+--make a list of empty lists expressing hours
+--drag items to different hours -lists-
+--if destination list contains an item, simply swap items in each list
+
+-each day should have a color in between all contained colors
+
+-to do, time,plan,schedule,,mgmt
+-tparted
+
+-replace 'this' with appropriate object name when possible
+-taskUI : use cat instead of catIndex
+-mouse slider
+
+-user logo on login
+
+-jwt expiration
+
+-task types
+-add taskFinished
+-when iterating tasks, fill day data structures with objects containing categoryId, taskId, fractionId
+-after rendering tasks, days renderer is going to be initiated, it will iterate defining objects to render contents
+-each fraction LI will hold an object containing nested identifiers
+-when a fraction is moved from a day to another, corresponding fraction object is edited.
+
+a.findIndex(function(e){if(e == undefined) return true});
+
+arr = arr.filter(function(n){ return n != undefined }); 
+
+-task fractions should be deleted if category or task is deleted
+-fractions should be edited if task is edited
+-one time tasks should be dragged and dropped to someday then becomes transparet (done)
+-big tasks can be dragged to some day but not dropped, rather the user should be asked how many hours should he split to that day
+
+-reconstruct using the updated class diagram
+-add week days dates
+-replace mysql with mongodb
+-add > and >> buttons (next day, next week)
+-autosave
+-add a generated fraction at the task details part that has an editable number of hours and can be dragged to a certain day
+-make checkboxes for days in tasks detains add form
+
+users:
+user
+-info
+-categories
+--tasks
+---taskFractions
+
+sharedCategories
+-categories
+--tasks
+---taskFractions
+
+
+firstName, lastName, email, telephone, password, address, city, country, region, pictureURL
+
+
+add
+remove
+edit
+view
+
+
+resetArrayIndex(arr, removedIndex){
+	return autoIncrement;
+}
+
+arr = [34,null,234,null,65,67,8]
+
+use timestaps only
+
+[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.2]

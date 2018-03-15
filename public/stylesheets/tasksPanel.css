@@ -1,0 +1,292 @@
+div#tasksBlock{
+	/*overflow: auto;*/
+	height:51%; 
+}
+
+#catUI{
+	/*padding-top: 1em;*/
+	background-color: #f8f8f8;
+	display: inline-block;
+	overflow-y: auto;
+	float: left;
+	height: 100%;
+	/*width:18%;*/
+	width: 22%;
+}
+
+ul#catList{
+	/*background-color:#4c4c4c;*/
+	/*width:100%;*/
+	/*height: 90%;*/
+	/*display:inline-block;*/
+	/*float: left;*/
+	overflow-y: auto;
+}
+
+#catUI input{
+	width: 100%;
+	height: 32px;
+}
+
+#catList li{
+	padding: 0 0.4em 0 1em;
+	height: 2.0em;
+}
+
+.CategoryTitleContainer{
+	width:auto;
+	display: block;
+	overflow: hidden;
+	float:none;
+}
+
+.icon{
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 0.5%;
+}
+
+
+ul#taskList{
+	/*background-color:transparent;
+	height: 100%;
+	display:block;
+	overflow-y: auto;
+	text-align: left;
+	padding: 0.4em;*/
+}
+
+#taskListContainer{
+	background-color:transparent;
+	/*width:65%;*/
+	height: 100%;
+	display:block;
+	/*display:inline-block;*/
+	/*float: left;*/
+	overflow-y: auto;
+	text-align: left;
+	padding: 0.4em;
+}
+
+.shareIcon{
+	float: right;
+}
+
+.shareIcon, .simplecolorpicker{
+	margin:0px;
+}
+
+.color-picker{
+}
+
+.simplecolorpicker.icon{
+	float:right;
+	background-position: center;
+	height: 100%; 
+}
+
+#task-mist{
+	display: none;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+    height: 100%;
+    z-index: 10;
+    /*position: absolute;*/
+    text-align: center;
+    /*left: 19%;*/
+}
+
+#task-mist .prompt{
+	width: 60%;
+}
+
+.tasks-sidebar{
+	width:20%;
+	height: 100%;
+	display:inline-block;
+	text-align: center;
+	float: right;
+}
+
+#search-settings{
+	display: none;
+	margin: 0 1%;
+	text-align: left;
+	width:20%;
+	overflow-y:auto;
+	float:left;
+}
+
+#taskDetails{
+	/*background-color: rgba(0,0,0,0.2);*/
+	/*padding:1%;*/
+}
+
+#taskDetailsContents{
+	background-color: rgba(0,0,0,0.2);
+	height: 100%;
+	padding:2% 1%;
+	border-radius: 5px;
+}
+
+textarea#taskDesc{
+	margin:4% 1%;
+	height: 30%;
+	resize: vertical;
+	width: 80%;
+}
+
+h3#taskTitle{
+	/*margin:5%;*/
+	margin: 0px;
+}
+
+li.taskItem{
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	display: block;
+	background-color: rgba(0,0,0,0.2);
+	text-align: center;
+	margin:0.2em;
+	line-height: 150%;
+	z-index: 10;
+	height: 2em;
+}
+
+.taskItem > *{
+	float:right;
+}
+
+div.dragHandle{
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	display: inline-block;
+    width: 3em;
+    float: left;
+}
+
+.taskItem input{
+	margin: 0.2em auto 0;
+}
+
+input.taskTitleInput{
+	width: 100%;
+}
+
+.taskTitleContainer{
+	width: auto;
+	display: block;
+	float:none;
+	overflow: hidden;
+	padding: 0 1em;
+	height: 100%;
+}
+
+img.taskNumHoursIcon{
+	height: 1.2em;
+    margin-right: 0.2em;
+}
+
+input.taskNumHoursInput, input#fractionNumHoursInput{
+	width: 3em;
+}
+
+li.fractionItem{
+	margin: 2px;
+    padding-left: 1em;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 5;
+}
+
+.fractionCloseBtn{
+	padding: 0;
+	width: 2em;
+	display: inline-block;
+	float: right;
+	height: 1.8em;
+}
+
+.fracTaskTitle{
+	width: 75%;
+	display: inline-block;
+	position: relative;
+	z-index: -1;
+}
+
+.fracNumHours{
+	width: 15%;
+	display: inline-block;
+	position: relative;
+	/*z-index: -1;*/
+}
+
+ul#dayNames{
+	height: 4%;
+	background-color: #f8f8f8;
+}
+
+.dayName{
+	/*background-color: #8e8e8e;*/
+	display: inline-block;
+	/*width: 14.285%;*/
+	/*float: left;*/
+	/*text-align: center;*/
+
+	/*height: 100%;*/
+}
+
+ul.dayList{
+	/*display: inline-block;*/
+	/*height: 100%;*/
+	/*width: 14.285%;*/
+	text-align: center;
+	/*float:left;*/
+	/*background-color: #f8f8f8;*/
+	overflow-y: auto;
+}
+
+.panel-title{
+	font-size: inherit;
+}
+
+.horSeperator{
+	height: 2%;
+	background-color: #f8f8f8;
+}
+
+.vertSeparator{
+	width: 0.334%;
+	width:0;
+	height: 100%;
+	float: left;
+	background-color: #4c4c4c;
+}
+
+
+#invitation-prompt{
+	display: none;
+}
+
+#sharing-prompt{
+	display: none;
+}
+
+@media (max-width: 992px) {
+	#taskDetails{
+		display: none;
+	}
+
+	#catUI{
+		width: 28%;
+	}
+}
+
+@media (max-width: 640px) {
+	#catUI{
+		width: 50%;
+	}
+}

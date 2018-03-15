@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <!-- <link rel='stylesheet' href='/stylesheets/jquery-ui.css' /> -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/tasksPanel.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery.simplecolorpicker.css">
+    
+
+    <script type="text/javascript" src="/javascripts/reqs/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/reqs/jquery-ui.js"></script>
+    <script type="text/javascript" src="/javascripts/reqs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/javascripts/reqs/jquery.simplecolorpicker.js"></script>
+    <script type="text/javascript" src="/javascripts/reqs/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/javascripts/constructors.js"></script>
+    <script type="text/javascript" src="/javascripts/auth.js"></script>
+    <script type="text/javascript" src="/javascripts/ui_auth.js"></script>
+
+    <script type="text/javascript" src="/javascripts/ui_cat.js"></script>
+    <script type="text/javascript" src="/javascripts/ui_task.js"></script>
+    <script type="text/javascript" src="/javascripts/ui_day.js"></script>
+    <script type="text/javascript" src="/javascripts/ui_taskDetails.js"></script>
+    <script type="text/javascript" src="/javascripts/tasksPanel.js"></script>
+
+  </head>
+  <body id="body">
+    <div id="navBar">
+      <div id="leftNav">
+        <button onclick="window.location='/'">home</button>
+        <button onclick="window.location='/tasks'">tasks panel</button>
+        <button onclick="window.location='/profile'">profile</button>
+        <button onclick="window.location='/contact'">contact</button>
+        <button onclick="window.location='/about'">about</button>
+      </div>
+      <button id="admin" onclick="window.location='/admin'">admin panel</button>
+      <button id="save">save</button>
+      <button id="register">register</button>
+      <button id="login">login</button>
+      <button id="logout">logout</button>
+    </div>
+    
+    <div id="tasksContainer">
+        
+      <ul id="catList">
+      </ul>
+
+      <div id="tasksBlock">
+        <ul id="taskList">
+        </ul>
+        
+        <div id="taskDetails">
+          <h3 id="taskTitle">&nbsp;</h3>
+          <span> task description: </span>
+          <textarea type="text" id="taskDesc"></textarea><br/>
+
+          <!-- add <input type="number" id="fractionNumHoursInput"/> hours<br/>
+          to <select id="fractionDaySelect"><option>sat</option><option>sun</option><option>mon</option><option>tue</option>
+          <option>wed</option><option>thu</option><option>fri</option></select>
+          <button id="addFracBtn">add</button> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="horSeperator"></div>
+    <ul id="dayNames">
+      <li class="dayName">saturday</li>
+      <li class="dayName">sunday</li>
+      <li class="dayName">monday</li>
+      <li class="dayName">tuesday</li>
+      <li class="dayName">wednesday</li>
+      <li class="dayName">thursday</li>
+      <li class="dayName">friday</li>
+    </ul>
+    <div id="daysContainer" style="">
+      <ul id="day-0" class="dayList"></ul>
+      <div class="vertSeparator"></div>
+      <ul id="day-1" class="dayList"></ul>
+      <div class="vertSeparator"></div>
+      <ul id="day-2" class="dayList"></ul>
+      <div class="vertSeparator"></div>
+      <ul id="day-3" class="dayList"></ul>
+      <div class="vertSeparator"></div>
+      <ul id="day-4" class="dayList"></ul>
+      <div class="vertSeparator"></div>
+      <ul id="day-5" class="dayList"></ul>
+      <div class="vertSeparator"></div>
+      <ul id="day-6" class="dayList"></ul>
+    </div>
+    <div class="horSeperator"></div>
+    <div id="mist" style="display:none;">
+      <div id="loginPrompt">
+        <label for="loginRadio">login</label><input type="radio" name="action" id="loginRadio" checked/>
+        <label for="registerRadio">register</label><input type="radio" name="action" id="registerRadio"/><br>
+
+        user name<input type="text" id="username" class="form"/><br />
+        <div id="emailContainer">email<input type="text" id="email" class="form"/></div>
+        <div id="fullnameContainer">full name<input type="text" id="fullname" class="form"/></div>
+        password <input type="password" id="password" class="form"/><br />
+        <div id="confirmPasswordContainer">confirm password<input type="password" id="confirmPassword" class="form"/></div>
+
+        <div id="authResponse"></div>
+        <button id="submit">login</button>
+        
+      </div>
+    </div>
+  </body>
+</html>
