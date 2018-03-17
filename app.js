@@ -41,6 +41,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/index.htm', index);
 
 app.post('/register', function(req, res) {
 	c.createUser(req.body, res);
