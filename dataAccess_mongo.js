@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var config = require('./config.json');
 
 mongoose.connect(config.mongodb.connectionString, config.mongodb.connectionOptions);
+
 var userSchema = new mongoose.Schema({
 	username : String,
 	email : String,

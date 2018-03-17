@@ -17,15 +17,15 @@ var app = express();
 
 app.use(compression());
 // app.use(minify({
-//   cache: false,
+//	 cache: false,
 // }));
 
 // view engine setup
 var hbsParams = {
-  title : 'tParted',
-  extname : 'htm',
-  defaultLayout : 'layout',
-  layoutsDir : path.join(__dirname, 'views'),
+	title : 'tParted',
+	extname : 'htm',
+	defaultLayout : 'layout',
+	layoutsDir : path.join(__dirname, 'views'),
 };
 
 app.engine('htm', handlebars(hbsParams));
@@ -43,66 +43,66 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 
 app.post('/register', function(req, res) {
-  c.createUser(req.body, res);
+	c.createUser(req.body, res);
 });
 
 app.post('/login', function(req, res) {
-  c.authUser(req.body, res);
+	c.authUser(req.body, res);
 });
 
 app.post('/getUsers', function(req, res) {
-  c.getUsers(req.cookies.jwt, res);
+	c.getUsers(req.cookies.jwt, res);
 });
 
 app.post('/removeUser', function(req, res) {
-  c.removeUser(req.cookies.jwt, req.body.userid, res);
+	c.removeUser(req.cookies.jwt, req.body.userid, res);
 });
 
 app.post('/getCats', function(req, res) {
-  c.getCats(req.cookies.jwt, res);
+	c.getCats(req.cookies.jwt, res);
 });
 
 app.post('/setCats', function(req, res) {
-  c.setCats(req.cookies.jwt, JSON.parse(req.body.categories), res);
+	c.setCats(req.cookies.jwt, JSON.parse(req.body.categories), res);
 });
 
 app.post('/getUserInfo', function(req, res) {
-  c.getUserInfo(req.cookies.jwt, res);
+	c.getUserInfo(req.cookies.jwt, res);
 });
 
 app.post('/getUserInfo', function(req, res) {
-  c.getUserInfo(req.cookies.jwt, res);
+	c.getUserInfo(req.cookies.jwt, res);
 });
 
 app.get('/profilePictures/*', function(req, res) {
-  var requestedFile = './public'+req.url;
-  fs.exists('./public/stupid.png'+req.url, function(exists) {
-    if (exists) {
-      res.sendFile('./public/profilePictures/stupid.png')
-    } else {
-      res.sendFile(__dirname+'/public/profilePictures/stupid.png')
-    }
-  });
-  
+	var requestedFile = './public'+req.url;
+	fs.exists('./public/stupid.png'+req.url, function(exists) {
+		if (exists) {
+			res.sendFile('./public/profilePictures/stupid.png')
+		} else {
+			res.sendFile(__dirname+'/public/profilePictures/stupid.png')
+		}
+	});
+	
 });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+	var err = new Error('Not Found');
+	err.status = 404;
+	next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-  console.log(err);
+	// render the error page
+	res.status(err.status || 500);
+	res.render('error');
+	console.log(err);
 });
 
 module.exports = app;

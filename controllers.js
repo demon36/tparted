@@ -66,7 +66,6 @@ module.exports = {
 	authToken : function(token){
 		try{
 			var verifiedJwt = njwt.verify(token, secretKey);
-			console.log(verifiedJwt);
 		}catch(err){
 			return null;
 		}

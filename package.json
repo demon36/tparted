@@ -16,11 +16,10 @@
     "express-minify": "^0.2.0",
     "install": "~0.8.2",
     "jimp": "^0.2.27",
-    "mongoose": "~4.7.1",
+    "mongoose": "^4.13.12",
     "morgan": "~1.7.0",
     "mysql": "^2.12.0",
     "njwt": "~0.3.2",
-    "npm": "~4.0.2",
     "password-hash": "~1.2.2",
     "serve-favicon": "~2.3.0",
     "uuid": "~3.0.1"
