@@ -6,7 +6,6 @@ mongoose.connect(config.mongodb.connectionString, config.mongodb.connectionOptio
 var userSchema = new mongoose.Schema({
 	username : String,
 	email : String,
-	fullname : String,
 	password : String,
 	role : String,
 	categories : Array
@@ -22,8 +21,8 @@ module.exports = {
 	},
 
 	//continue here
-	insertUser : function(username, password, email, fullname, role){
-		var newUser = new user({username : username, email : email, fullname : fullname, password : password, role : role});
+	insertUser : function(username, password, email, role){
+		var newUser = new user({username : username, email : email, password : password, role : role});
 		newUser.save();
 		return newUser._id;
 	},

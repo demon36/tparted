@@ -14,8 +14,6 @@ var userInfo = {
 	},
 
 	render : function(user){
-		$('#profilePicture')[0].setAttribute('src', '/profilePictures/'+user._id+'.jpg');
-
 		var content = $('div#content');
 
 		$('<div/>',{ html : 'id', 'class' : 'userInfoLabel', appendTo : content });
@@ -23,9 +21,6 @@ var userInfo = {
 
 		$('<div/>',{ html : 'username', 'class' : 'userInfoLabel', appendTo : content });
 		$('<div/>',{ html : user.username, 'class' : 'userInfoValue', appendTo : content });
-
-		$('<div/>',{ html : 'fullname', 'class' : 'userInfoLabel', appendTo : content });
-		$('<div/>',{ html : user.fullname, 'class' : 'userInfoValue', appendTo : content });
 
 		$('<div/>',{ html : 'email', 'class' : 'userInfoLabel', appendTo : content });
 		$('<div/>',{ html : user.email, 'class' : 'userInfoValue', appendTo : content });

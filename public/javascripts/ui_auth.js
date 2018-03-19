@@ -4,7 +4,6 @@ var authUI = {
 
 	usernameInput : null,
 	emailInput : null,
-	fullnameInput : null,
 	passwordInput : null,
 	confirmPasswordInput : null,
 	
@@ -35,12 +34,10 @@ var authUI = {
 		authUI.passwordInput = $('input#password');
 
 		authUI.emailInput = $('input#email');
-		authUI.fullnameInput = $('input#fullname');
-		authUI.profilePicture = $('input#profilePicture');
 		authUI.confirmPasswordInput = $('input#confirmPassword');
 
 		authUI.loginFields = [authUI.usernameInput, authUI.passwordInput];
-		authUI.registerFields = [authUI.usernameInput, authUI.passwordInput, authUI.emailInput, authUI.fullnameInput, authUI.confirmPasswordInput];
+		authUI.registerFields = [authUI.usernameInput, authUI.passwordInput, authUI.emailInput, authUI.confirmPasswordInput];
 
 		authUI.switchToLogin();
 		authUI.logoutBtn.hide();
@@ -90,9 +87,7 @@ var authUI = {
 
 	switchToLogin : function() {
 		$('#emailContainer').hide();
-		$('#fullnameContainer').hide();
 		$('#confirmPasswordContainer').hide();
-		$('#profilePictureContainer').hide();
 		authUI.authOperation = 'login';
 		$('#submit').html(authUI.authOperation)
 		$('input:radio[name=action]')[0].checked = true;
@@ -100,9 +95,7 @@ var authUI = {
 
 	switchToRegister : function() {
 		$('#emailContainer').show();
-		$('#fullnameContainer').show();
 		$('#confirmPasswordContainer').show();
-		$('#profilePictureContainer').show();
 		authUI.authOperation = 'register';
 		$('#submit').html(authUI.authOperation);
 		$('input:radio[name=action]')[1].checked = true;
@@ -110,29 +103,11 @@ var authUI = {
 
 	submit : function(){
 		if(authUI.authOperation == 'register' && authUI.validateRegister()){
-			var file = document.getElementById('profilePictureInput').files[0];
-			var reader = new FileReader();
-			if(file){
-				reader.readAsDataURL(file);
-				reader.onloadend = function(){
-					auth.register({
-						username : authUI.usernameInput.val(),
-						password : authUI.passwordInput.val(),
-						email : authUI.emailInput.val(),
-						fullname : authUI.fullnameInput.val(),
-						profilePicture : reader.result,
-					});
-				};
-			}else{
-				auth.register({
-					username : authUI.usernameInput.val(),
-					password : authUI.passwordInput.val(),
-					email : authUI.emailInput.val(),
-					fullname : authUI.fullnameInput.val(),
-				});
-			}
-			
-			
+			auth.register({
+				username : authUI.usernameInput.val(),
+				password : authUI.passwordInput.val(),
+				email : authUI.emailInput.val(),
+			});
 
 		}else if(authUI.authOperation == 'login' && authUI.validateLogin()){
 			auth.login({

@@ -22,7 +22,7 @@ module.exports = {
 					retJson = { msg : 'user already exists', success : false};
 				}else{
 					var hashedPassword = pwHash.generate(cred.password);
-					var newUserId = DAL.insertUser(cred.username, hashedPassword, cred.email, cred.fullname, 'user');
+					var newUserId = DAL.insertUser(cred.username, hashedPassword, cred.email);
 					module.exports.saveUserPP(newUserId, cred.profilePicture);
 					
 

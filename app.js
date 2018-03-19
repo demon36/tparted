@@ -75,18 +75,6 @@ app.post('/getUserInfo', function(req, res) {
 	c.getUserInfo(req.cookies.jwt, res);
 });
 
-app.get('/profilePictures/*', function(req, res) {
-	var requestedFile = './public'+req.url;
-	fs.exists('./public/stupid.png'+req.url, function(exists) {
-		if (exists) {
-			res.sendFile('./public/profilePictures/stupid.png')
-		} else {
-			res.sendFile(__dirname+'/public/profilePictures/stupid.png')
-		}
-	});
-	
-});
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');
