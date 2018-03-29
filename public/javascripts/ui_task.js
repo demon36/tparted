@@ -162,7 +162,7 @@ var taskUI = {
 		return taskLI;
 	},
 
-	onTaskTitleChange : function(){
+	onTaskTitleChange : function(event){
 		
 		var index = $(this).parent().parent().index();
 		if(event.keyCode == 13){
